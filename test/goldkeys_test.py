@@ -14,7 +14,7 @@ class FlaskrTestCase(unittest.TestCase):
     def testFirstCompanyIsCorrect(self):
         response = self.app.get('/company/1')
         json_data = json.loads(response.data)
-        self.assertEqual(json_data['company_code'], '123456')
+        self.assertEqual(json_data['company_code'], 'wrong')
 
 if __name__ == '__main__':
     unittest.main()
