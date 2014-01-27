@@ -10,5 +10,4 @@ import json
 @crossdomain(origin="*")
 # @requires_auth
 def fetch_all_factories():
-
 	return json.dumps(all_factories())

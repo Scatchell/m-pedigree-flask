@@ -2,7 +2,7 @@ import goldkeys
 import unittest
 import json
 
-class FlaskrTestCase(unittest.TestCase):
+class CompanyTestCase(unittest.TestCase):
     def setUp(self):
         goldkeys.app.config['TESTING'] = True
         self.app = goldkeys.app.test_client()
@@ -14,7 +14,7 @@ class FlaskrTestCase(unittest.TestCase):
     def testFirstCompanyIsCorrect(self):
         response = self.app.get('/company/1')
         json_data = json.loads(response.data)
-        self.assertEqual(json_data['company_code'], 'wrong')
+        self.assertEqual(json_data['company_code'], '123456')
 
 if __name__ == '__main__':
     unittest.main()
